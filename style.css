@@ -1,0 +1,113 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+.container{
+    
+    height:600px;
+    width:600px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 3fr 5fr 2fr 6fr;
+    padding: 20px;
+   
+}
+.items{
+    display: grid;
+    place-items: center;
+}
+.header{
+    background-color: rgb(44, 183, 247);
+    grid-column: span 3;
+}
+.feature1{
+    background-color: yellow;
+    grid-column: span 1;
+}
+.feature2{
+    background-color: rgb(230, 130, 243);
+    grid-column: span 1,2;
+}
+.feature3{
+    background-color: rgb(244, 93, 95);
+    grid-column: span 1,2,3;
+}
+.signup{
+    background-color: rgb(168, 251, 250);
+    grid-column: span 3;
+}
+.content{
+    background-color: rgb(222, 244, 247);
+    grid-column: span 3;
+}
+
+@media  screen and (max-width:700px) {
+    .container{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows:1fr 3fr 2fr 2fr ;
+        width:300px;
+    }
+    .header{
+        order:1;
+        grid-column: span 4;
+    }
+    .content{
+        order:2;
+        grid-column: span 4;
+    }
+    .signup{
+        order:3;
+        grid-column: span 2;
+    }
+    .feature1{
+        order:4;
+        grid-column: span 2;
+    }
+    .feature2{
+       order:6;
+       grid-column: span 2;
+    }
+    .feature3{
+        order:5;
+        grid-column: span 2;
+     }
+}
+@media screen and (max-width:500px){
+    .container{
+        display: grid;
+        grid-template-rows: 1fr 3fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: auto auto auto auto;
+        width:200px
+    }
+    .header{
+        order:1;
+        grid-column:span 4;
+    }
+    .content{
+        order:2;
+        grid-column: span 4;
+    }
+    .signup{
+        order:3;
+        grid-column: span 4;
+    }
+    .feature1{
+        order:4;
+        grid-column: span 4;
+    }
+    .feature3{
+        order:5;
+        grid-column: span 4;
+    }
+    .feature2{
+        order:6;
+        grid-column: span 4;
+    }
+
+}
